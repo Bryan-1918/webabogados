@@ -7,14 +7,14 @@ body {
 
 header {
     background-color: #f2f2f2;
-    padding: 10px 0;
+    padding: 10px;
 }
 
 nav {
     display: flex;
     justify-content: center; /* Centra el contenido horizontalmente */
     align-items: center;
-    gap: 50px;
+    gap: 400px;
 }
 
 nav img {
@@ -35,7 +35,11 @@ nav ul li {
 }
 
 section {
-    padding: 20px;
+    padding: 10px;
+}
+
+footer {
+    padding: 10px;
 }
 
 .tit_art{
@@ -52,5 +56,4 @@ section {
 
 .lista {
     display: inline-block;
-
 }

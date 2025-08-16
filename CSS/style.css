@@ -1,3 +1,4 @@
+/* ====== ESTILOS GENERALES ====== */
 body {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
@@ -5,16 +6,70 @@ body {
     font-style: normal;
 }
 
+/* ====== SECCIÓN JUSTICE (imagen de inicio) ====== */
+.justice {
+    height: 80vh;  /* Ocupa toda la altura de la ventana */
+    background-image: url('../images/index.jpg');
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* Capa oscura encima de la imagen para resaltar el texto */
+.justice::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+/* Texto dentro del hero */
+.justice-text {
+    position: relative;
+    z-index: 1; /* Para que quede encima de la capa oscura */
+    max-width: 800px;
+}
+
+.justice-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.justice-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.justice-text button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.justice-text button:hover {
+    background: white;
+    color: black;
+}
+
+/* ====== ENCABEZADO Y NAVEGACIÓN ====== */
 header {
     background-color: #f2f2f2;
     padding: 10px;
 }
 
 nav {
-    display: flex;
+    display: inline-flex;
     justify-content: center; /* Centra el contenido horizontalmente */
     align-items: center;
-    gap: 400px;
+    gap: 400px; /* Espacio entre logo y menú */
 }
 
 nav img {
@@ -34,6 +89,7 @@ nav ul li {
     font-weight: bold;
 }
 
+/* ====== SECCIONES Y FOOTER ====== */
 section {
     padding: 10px;
 }
@@ -42,7 +98,8 @@ footer {
     padding: 10px;
 }
 
-.tit_art{
+/* ====== TIPOGRAFÍA DE ARTÍCULOS ====== */
+.tit_art {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -50,10 +107,12 @@ footer {
     color: rgb(165, 75, 42);
 }
 
-.img_header{
+/* ====== IMÁGENES ====== */
+.img_header {
     width: 100%;
 }
 
+/* ====== LISTAS ====== */
 .lista {
     display: inline-block;
 }

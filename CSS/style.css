@@ -67,7 +67,7 @@ header {
 
 nav {
     display: inline-flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
+    justify-content: space-between; /* Centra el contenido horizontalmente */
     align-items: center;
     gap: 400px; /* Espacio entre logo y menú */
 }
@@ -115,4 +115,108 @@ footer {
 /* ====== LISTAS ====== */
 .lista {
     display: inline-block;
+}
+
+/* Formulario */
+form {
+    max-width: 700px;
+    margin: auto;
+    padding: 50px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+form p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Estilo general de los inputs y textarea */
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3 ease;
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    font-family: inherit;
+    color: #999;
+}
+
+/* Para los campos de nombre y teléfono en la misma fila */
+.form-row {
+    display: flex;
+    gap: 1px;
+    width: auto;
+}
+
+.form-row input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+
+/* Checkbox y texto alineados */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin: 12px 0;
+    gap: 8px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+
+.checkbox-container label {
+  font-size: 14px;
+  color: #333;
+}
+
+/* botón enviar */
+form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #a54b2a;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #873d22;
 }

@@ -13,17 +13,28 @@
 
 <body>
   <header>
-    <nav> 
-      <img src="./images/Lex-Asociados-Barcelona-logo-.png" alt="logo">
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Áreas jurídicas</a></li>
-        <li><a href="#">Honorarios</a></li>
-        <li><a href="#">Contacto</a></li>
-        <li><a href="#">Blog</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="./images/Lex-Asociados-Barcelona-logo-.png" alt="logo" width="120">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
+
 
   <section class="justice">
     <div class="justice-text">
@@ -33,7 +44,7 @@
     </div>
   </section>
 
-  <section>
+  <section class="container my-5">
     <article>
       <p class="tit_art">Artículo 2</p>
       <p>Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti sociosqu ad litora torquent per conubia nostra inceptos himenaeos orci varius natoque penatibus et magnis.</p>
@@ -48,10 +59,7 @@
     </article>
   </section>
 
-  <section>
-    <article>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/pY2qMuptU6A?si=-1jWOBa6zYf28Q4N" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-    </article>
+  <section class="container my-5">
     <article>
       <form action="#" method="post">
         <h2>¡Contáctanos!</h2>
@@ -59,7 +67,7 @@
 
         <div class="form-row">
             <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre" required>
-            <input type="number" name="telefonoUsuario" id="telefonoUsuario" placeholder="Teléfono" required><br>
+            <input type="number" name="telefonoUsuario" id="telefonoUsuario" placeholder="Teléfono" required>
         </div>
         <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
         <textarea name="descripcion" id="descripcion" rows="3" placeholder="¿Cómo podemos ayudarte?" required></textarea>
@@ -73,13 +81,14 @@
     </article>
   </section>
 
-  <footer>
+  <footer class="py-4">
     <article>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2546.1985429995243!2d-74.0551193300368!3d4.662126238815688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a433607e0cd%3A0x7f49014fe7203f21!2sUniversidad%20Ean!5e0!3m2!1ses-419!2sco!4v1754438557011!5m2!1ses-419!2sco" width="400" height="400" style="border:0;" allowfullscreen loading="lazy"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2546.1985429995243!2d-74.0551193300368!3d4.662126238815688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a433607e0cd%3A0x7f49014fe7203f21!2sUniversidad%20Ean!5e0!3m2!1ses-419!2sco!4v1754438557011!5m2!1ses-419!2sco" width="400" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
     </article>
+    <p class="mt-3">&copy; 2025 Lex & Asociados - Todos los derechos reservados</p>
   </footer>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -147,3 +147,18 @@ footer {
     color: var(--neutral);
     text-align: center;
 }
+
+/* dropdown personalizado */
+.navbar .dropdown-menu {
+    background-color: var(--primary) !important;
+    border: none !important;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    color: var(--neutral) !important;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+    background-color: var(--accent) !important;
+    color: var(--neutral) !important;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Lex & Asociados</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./images/Lex-Asociados-Barcelona-logo-.png" alt="logo" width="250">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="servicios.html"
+                                data-bs-toggle="dropdown">Servicios</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Defensa Penal</a></li>
+                                <li><a class="dropdown-item" href="#">Defensa Laboral</a></li>
+                                <li><a class="dropdown-item" href="#">Defensa Civil</a></li>
+                                <li><a class="dropdown-item" href="#">Derecho Bancario</a></li>
+                                <li><a class="dropdown-item" href="#">Derecho Familia</a></li>
+                                <li><a class="dropdown-item" href="#">Derecho Inmobiliario</a></li>
+                                <li><a class="dropdown-item" href="#">Asesoría Fiscal</a></li>
+                                <li><a class="dropdown-item" href="#">Asesoría Extranjería</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <section class="text-center mb-5">
+            <h1 class="mb-3">Contáctanos</h1>
+            <p class="lead">En Lex & Asociados, creemos que una buena comunicación es el primer paso para resolver
+                cualquier situación jurídica. Si tienes dudas, necesitas orientación o deseas agendar una consulta, no
+                dudes en escribirnos. Nuestro equipo está listo para escucharte y ofrecerte soluciones claras,
+                confiables y personalizadas.</p>
+                <section class="my-5">
+                    <h2 class="text-center mb-4" style="color: var(--accent); font-weight:700;">Envíanos un mensaje</h2>
+                    <form action="#" method="post">
+    
+                        <div class="form-row">
+                            <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre" required>
+                            <input type="number" name="telefonoUsuario" id="telefonoUsuario" placeholder="Teléfono"
+                                required>
+                        </div>
+                        <input type="email" name="email" id="email" placeholder="Correo electrónico" required>
+                        <textarea name="descripcion" id="descripcion" rows="3" placeholder="¿Cómo podemos ayudarte?"
+                            required></textarea>
+    
+                        <div class="checkbox-container">
+                            <input type="checkbox" name="politica" id="politica" required>
+                            <label for="politica">He leído y acepto la <a href="#">Política de privacidad</a></label>
+                        </div>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </section>
+                <section class="my-5">
+                <div class="row align-items-start">
+                    <h2 class="text-center mb-4" style="color: var(--accent); font-weight: 700;">Ubícanos</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2546.1985429995243!2d-74.0551193300368!3d4.662126238815688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a433607e0cd%3A0x7f49014fe7203f21!2sUniversidad%20Ean!5e0!3m2!1ses-419!2sco!4v1754438557011!5m2!1ses-419!2sco"
+                        width="400" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

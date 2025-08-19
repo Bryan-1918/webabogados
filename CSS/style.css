@@ -1,5 +1,5 @@
 :root {
-  --primary: #263366;     /* Azul oscuro */
+  --primary: #2C2C2C;     /* Gris carbón */
   --secondary: #E0E1DD;   /* Gris claro */
   --neutral: #FFFFFF;     /* Blanco */
   --accent: #C19A6B;      /* Dorado elegante */
@@ -161,4 +161,17 @@ footer {
 .navbar .dropdown-menu .dropdown-item:hover {
     background-color: var(--accent) !important;
     color: var(--neutral) !important;
+}
+
+.btn-blog {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.btn-blog:hover {
+  background-color: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #fff !important;
 }

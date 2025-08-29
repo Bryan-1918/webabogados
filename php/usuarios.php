@@ -1,7 +1,7 @@
 <?php
 include 'conexion.php';
-$nombreUsuario = $_POST['nombre'];
-$passUsuario = $_POST['password'];
+$nombreUsuario = $_POST['nombreUsuario'];
+$passUsuario = $_POST['passUsuario'];
 
 echo $nombreUsuario;
 echo $passUsuario;

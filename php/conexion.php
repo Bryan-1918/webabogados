@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "areas";
+$dbname = "web_abogados";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);

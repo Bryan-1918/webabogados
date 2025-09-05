@@ -49,19 +49,21 @@
     </div>
   </section>
 
-  <form action="php/usuarios.php" method="post" class="row g-2 align-items-center">
-    <div class="col-md-4">
-      <input type="text" name="nombreUsuario" placeholder="Nombre" required>
-    </div>
-
-    <div class="col-md-4">
-      <input type="password" class="form-control" name="passUsuario" placeholder="Contraseña" required>
-    </div>
-
-    <div class="col-md-3">
-      <button type="submit" class="btn w-100" style="background-color: var(--accent); color: white;">Enviar</button>
-    </div>
-  </form>
+  <section class="container my-5" id="formulario-login">
+    <article>
+      <form action="php/usuarios.php" method="post">
+        <h2 class="text-center mb-5" style="color:var(--primary); font-weight: 700;">Inicio de Sesión</h2>
+        <div class="form-row">
+          <input type="text" name="emailUsuario" placeholder="Correo" required>
+          <input type="password" class="form-control" name="passUsuario" placeholder="•••••••••" required>
+        </div>
+  
+        <div class="col-md-3">
+          <button type="submit">Ingresar</button>
+        </div>
+      </form>
+    </article>
+  </section>
 
   <section class="container my-5" id="destacados">
     <h2 class="text-center mb-4" style="color: var(--accent); font-weight: 700;">Nuestros Servicios Destacados</h2>

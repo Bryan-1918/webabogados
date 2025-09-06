@@ -36,64 +36,36 @@
         </nav>
     </header>
 
-    <section>
-        <articles>
-
-        </articles>
-        <articles>
-
-        </articles>
-        <articles>
-
-        </articles>
-        <articles>
-            
-        </articles>
-    </section>
-
-    <main class="container d-flex justify-content-center align-items-center vh-100">
-        <div class="card shadow p-4" style="max-width: 400px; width: 100%;">
-            <h2 class="text-center mb-4" style="color: var(--accent);">Registrarse</h2>
-            <form action="./php/registros.php" method="post">
-                <div class="mb-3">
-                    <div class="col">
-                        <label for="nombre" class="form-label">Nombre</label>
-                        <input type="nombre" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
-                    </div>
-                    <div class="col">
-                        <label for="apellido" class="form-label">Apellido</label>
-                        <input type="apellido" class="form-control" id="apellido" name="apellido" placeholder="Apellido"
-                            required>
-                    </div>
+    <section id="crud-usuarios" class="my-5">
+        <div class="container text-center">
+            <div class="row row-cols-2 g-4">
+                <div class="col">
+                    <a href="crearUsuario.html">
+                        <img src="./assets/images/crear_usuario.png" class="img-crud" alt="Crear usuario">
+                        <p>Crear Usuario</p>
+                    </a>
                 </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@correo.com"
-                        required>
+                <div class="col">
+                    <a href="#">
+                        <img src="./assets/images/quitar_usuario.png" class="img-crud" alt="Eliminar usuario">
+                        <p>Eliminar Usuario</p>
+                    </a>
                 </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Teléfono</label>
-                    <input type="telefono" class="form-control" id="telefono" name="telefono" placeholder="Teléfono"
-                        required>
+                <div class="col">
+                    <a href="#">
+                        <img src="./assets/images/listar_usuario_logo.png" class="img-crud" alt="Listar usuario">
+                        <p>Listar Usuario</p>
+                    </a>
                 </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder="•••••••••"
-                        required>
+                <div class="col">
+                    <a href="#">
+                        <img src="./assets/images/actualizar_usuario_logo.png" class="img-crud" alt="Actualizar usuario">
+                        <p>Actualizar Usuario</p>
+                    </a>
                 </div>
-                <div class="mb-3">
-                    <label for="tipoUsuario" class="form-label">Tipo de usuario</label>
-                    <select class="form-select" id="tipoUsuario" name="tipoUsuario" required>
-                        <option value="">Selecciona una opción</option>
-                        <option value="administrador">Administrador</option>
-                        <option value="usuario">Usuario</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn w-100"
-                    style="background-color: var(--accent); color: white;">Registrarse</button>
-            </form>
+            </div>
         </div>
-    </main>
+    </section>
 
     <footer class="py-4 bg-dark text-light">
         <div class="container">

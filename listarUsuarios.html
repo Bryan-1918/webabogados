@@ -2,18 +2,18 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Lex & Asociados</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/CSS/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Lex & Asociados</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/CSS/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
+  <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
@@ -36,40 +36,31 @@
         </nav>
     </header>
 
-    <section id="crud-usuarios" class="my-5">
-        <div class="container text-center">
-            <div class="row row-cols-2 g-4">
-                <div class="col">
-                    <a href="crearUsuario.html">
-                        <img src="./assets/images/crear_usuario.png" class="img-crud" alt="Crear usuario">
-                        <p>Crear Usuario</p>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="./eliminarUsuario.html">
-                        <img src="./assets/images/quitar_usuario.png" class="img-crud" alt="Eliminar usuario">
-                        <p>Eliminar Usuario</p>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="./listarUsuarios.html">
-                        <img src="./assets/images/listar_usuario_logo.png" class="img-crud" alt="Listar usuario">
-                        <p>Listar Usuario</p>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#">
-                        <img src="./assets/images/actualizar_usuario_logo.png" class="img-crud" alt="Actualizar usuario">
-                        <p>Actualizar Usuario</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+  <main class="container my-5">
+    <h2 class="text-center mb-4" style="color: var(--accent); font-weight: 700;">Listado de Usuarios</h2>
+    <div class="table-responsive shadow rounded">
+        <table class="table table-striped align-middle text-center">
+            <thead class="table-dark" href="./php/listarUsuarios.php">
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+                    <th>Rol</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-usuarios">
+            </tbody>
+        </table>
+    </div>
+  </main>
 
-    <footer class="py-4 bg-dark text-light">
+  <footer class="py-4 bg-dark text-light">
         <div class="container">
             <div class="row align items-center">
+
                 <div class="col-md-6 text start">
                     <h5>Contacto</h5>
                     <p>Dirección: Cra. 11 #78 - 47, Bogotá</p>
@@ -95,6 +86,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+
+        <script>
+            fetch('./php/listarUsuarios.php')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("tbody-usuarios").innerHTML = data;
+                })
+                .catch(error => console.error('Error cargando usuarios:', error));
+        </script>
 </body>
 
 </html>

@@ -10,10 +10,14 @@ $tipoUsuario = $_POST['tipoUsuario'];
 $sql = "INSERT INTO usuarios (nombreUsuario, apellidoUsuario, emailUsuario, telUsuario, passUsuario, tipoUsuario, created_at, updated_at) VALUES ('$nombreUsuario', '$apellidoUsuario', '$emailUsuario', '$telUsuario', '$passUsuario', '$tipoUsuario', NOW(), NOW())";
 $result = mysqli_query($conn, $sql);
 
-if (mysqli_query($conn, $sql)) {
-  echo "New record created successfully ✅";
+if ($result) {
+  echo "Usuario registrado correctamente ✅";
 } else {
-  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  if (mysqli_errno($conn) == 1062) { // Código de error de duplicado
+    echo "❌ Este correo ya está registrado. Intenta con otro.";
+  } else {
+    echo "Error: " . mysqli_error($conn);
+  }
 }
 
 

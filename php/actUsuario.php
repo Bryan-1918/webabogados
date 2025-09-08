@@ -14,6 +14,9 @@ if (mysqli_num_rows($result) > 0) {
             <td>".$row["emailUsuario"]."</td>
             <td>".$row["telUsuario"]."</td>
             <td>".$row["tipoUsuario"]."</td>
+            <td>
+              <a href='editarUsuario.php?email=".$row["emailUsuario"]."' class='btn btn-sm btn-primary'>Editar</a>
+            </td>
           </tr>";
   }
 } else {

@@ -48,6 +48,7 @@
                     <th>Correo</th>
                     <th>Teléfono</th>
                     <th>Rol</th>
+                    <th>Acción</th>
                 </tr>
             </thead>
             <tbody id="tbody-usuarios">
@@ -87,7 +88,7 @@
         crossorigin="anonymous"></script>
 
         <script>
-            fetch('./php/listarUsuarios.php')
+            fetch('./php/actUsuario.php')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById("tbody-usuarios").innerHTML = data;

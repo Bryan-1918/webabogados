@@ -11,7 +11,10 @@ $sql = "INSERT INTO usuarios (nombreUsuario, apellidoUsuario, emailUsuario, telU
 $result = mysqli_query($conn, $sql);
 
 if ($result) {
-  echo "Usuario registrado correctamente ✅";
+  echo "<script>
+          alert('Usuario creado correctamente ✅');
+          window.location.href = '../crudUser.html'; // <-- Redirige al menú del CRUD
+        </script>";
 } else {
   if (mysqli_errno($conn) == 1062) { // Código de error de duplicado
     echo "❌ Este correo ya está registrado. Intenta con otro.";

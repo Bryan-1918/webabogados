@@ -24,7 +24,10 @@ if (mysqli_num_rows($result) > 0) {
   }
   
 } else {
-  echo "0 results";
+  echo "<script>
+            alert('❌Contraseña incorrecta: " . mysqli_error($conn) . "');
+            window.location.href='../login.html';
+          </script>";
 }
 
 mysqli_close($conn);

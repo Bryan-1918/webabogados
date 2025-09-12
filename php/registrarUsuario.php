@@ -13,7 +13,7 @@ $result = mysqli_query($conn, $sql);
 if ($result) {
   echo "<script>
           alert('Usuario creado correctamente ✅');
-          window.location.href = '../login.html'; // <-- Redirige al menú del CRUD
+          window.location.href = '../crudUser.html'; // <-- Redirige al menú del CRUD
         </script>";
 } else {
   if (mysqli_errno($conn) == 1062) { // Código de error de duplicado

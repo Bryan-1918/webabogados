@@ -1,4 +1,5 @@
 <?php
+// Eliminar usuario desde el CRUD 
 include 'conexion.php';
 
 $emailUsuario = $_POST['emailUsuario'];

@@ -1,4 +1,5 @@
 <?php
+// Actualizar usuario desde el crud
 include 'conexion.php';
 
 $nombreUsuario = $_POST['nombreUsuario'];

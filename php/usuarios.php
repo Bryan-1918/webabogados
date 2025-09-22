@@ -1,4 +1,6 @@
 <?php
+// Verificación del login dependiendo del tipo de usuario
+session_start();
 include 'conexion.php';
 $emailUsuario = $_POST['emailUsuario'];
 $passUsuario = $_POST['passUsuario'];
@@ -21,6 +23,7 @@ if (mysqli_num_rows($result) > 0) {
     break;
     case "Usuario": echo "Es pepito";
                     header('location: ../index.html');
+    break;
   }
   
 } else {

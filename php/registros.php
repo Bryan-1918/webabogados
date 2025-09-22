@@ -1,4 +1,5 @@
 <?php
+// Esta clase es para los registros de los usuarios (visitantes)
 include 'conexion.php';
 $nombreUsuario = $_POST['nombre'];
 $apellidoUsuario = $_POST['apellido'];
@@ -7,21 +8,27 @@ $telUsuario = $_POST['telefono'];
 $passUsuario = $_POST['password'];
 $tipoUsuario = 'Usuario';
 
-$sql = "INSERT INTO usuarios (nombreUsuario, apellidoUsuario, emailUsuario, telUsuario, passUsuario, tipoUsuario, created_at, updated_at) 
-        VALUES ('$nombreUsuario', '$apellidoUsuario', '$emailUsuario', '$telUsuario', '$passUsuario', '$tipoUsuario', NOW(), NOW())";
-$result = mysqli_query($conn, $sql);
+// encriptar contraseña
+$passHash = password_hash($passUsuario, PASSWORD_DEFAULT);
 
-if ($result) {
-  echo "<script>
-          alert('Usuario creado correctamente ✅');
-          window.location.href = '../login.html'; // <-- Redirige al login
-        </script>";
+// validar que el correo no esté repetido
+$check = "SELECT * FROM usuarios WHERE emailUsuario='$emailUsuario'";
+$result = mysqli_query($conn, $check);
+
+if (mysqli_num_rows($result) > 0) {
+    echo "<script>alert('❌ Este correo ya está registrado'); window.history.back();</script>";
+    exit();
+}
+
+$sql = "INSERT INTO usuarios 
+        (nombreUsuario, apellidoUsuario, emailUsuario, telUsuario, passUsuario, tipoUsuario, created_at, updated_at) 
+        VALUES 
+        ('$nombreUsuario', '$apellidoUsuario', '$emailUsuario', '$telUsuario', '$passHash', '$tipoUsuario', NOW(), NOW())";
+
+if (mysqli_query($conn, $sql)) {
+    echo "<script>alert('✅ Usuario registrado correctamente'); window.location.href='../login.html';</script>";
 } else {
-  if (mysqli_errno($conn) == 1062) { // Código de error de duplicado
-    echo "❌ Este correo ya está registrado. Intenta con otro.";
-  } else {
-    echo "Error: " . mysqli_error($conn);
-  }
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
 

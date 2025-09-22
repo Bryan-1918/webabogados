@@ -1,4 +1,5 @@
 <?php
+// Lista de usuarios desde el CRUD
 include 'conexion.php';
 
 $sql = "SELECT * FROM usuarios";

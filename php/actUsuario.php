@@ -1,4 +1,5 @@
 <?php
+// Interfaz para mostrar los usuarios con el botón de editarlos
 include 'conexion.php';
 
 $sql = "SELECT * FROM usuarios";

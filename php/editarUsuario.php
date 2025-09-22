@@ -1,4 +1,5 @@
 <?php
+// Esta clase es para editar los usuarios desde el crud con superadmin
 include 'conexion.php';
 
 if (isset($_GET['email'])) {

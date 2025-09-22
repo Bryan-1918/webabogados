@@ -1,4 +1,5 @@
 <?php
+// Registrar usuario desde el crid
 include 'conexion.php';
 $nombreUsuario = $_POST['nombre'];
 $apellidoUsuario = $_POST['apellido'];

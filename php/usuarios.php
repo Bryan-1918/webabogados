@@ -25,7 +25,7 @@ if (mysqli_num_rows($result) > 0) {
             case "Administrador":
                 header('location: ../adminDashboard.html');
                 break;
-            case "Especializado":
+            case "Abogado":
                 header('location: ../abogadoDashboard.html');
                 break;
             case "Usuario":

@@ -50,6 +50,7 @@ if (isset($_GET['email'])) {
           <label class="form-label">Rol</label>
           <select class="form-select" name="tipoUsuario" required>
             <option value="Administrador" <?php if($row['tipoUsuario']=="Administrador") echo "selected"; ?>>Administrador</option>
+            <option value="Usuario" <?php if($row['tipoUsuario']=="Abogado") echo "selected"; ?>>Abogado</option>
             <option value="Usuario" <?php if($row['tipoUsuario']=="Usuario") echo "selected"; ?>>Usuario</option>
           </select>
         </div>

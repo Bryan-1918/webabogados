@@ -39,7 +39,7 @@
     <main class="container d-flex justify-content-center align-items-center vh-100">
         <div class="card shadow p-4" style="max-width: 400px; width: 100%;">
             <h2 class="text-center mb-4" style="color: var(--accent);">Crear Usuario</h2>
-            <form action="./php/registros.php" method="post">
+            <form action="./php/registrarUsuario.php" method="post">
                 <div class="mb-3">
                     <div class="col">
                         <label for="nombre" class="form-label">Nombre</label>
@@ -71,7 +71,7 @@
                     <select class="form-select" id="tipoUsuario" name="tipoUsuario" required>
                         <option value="">Selecciona una opción</option>
                         <option value="Administrador">Administrador</option>
-                        <option value="Especializado">Abogado</option>
+                        <option value="Abogado">Abogado</option>
                         <option value="Usuario">Usuario</option>
                     </select>
                 </div>

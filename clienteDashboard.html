@@ -14,78 +14,77 @@
 
 <body>
   <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <img src="./assets/images/Lex-Asociados-Barcelona-logo-.png" alt="logo" width="250">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/images/Lex-Asociados-Barcelona-logo-.png" alt="logo" width="200">
+        </a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="clienteDashboard.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Mis Procesos</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link text-danger" href="./php/logout.php">Cerrar Sesión</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-    <main class="container my-5">
-        <h2 class="text-center mb-4" style="color: var(--accent); font-weight: 700;">Panel del abogado</h2>
-        
-        <div class="row g-4">
-            <!--Casos asignados-->
-            <div class="col-md-4">
-                <div class="card shadow h-100">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <h5 class="card-title" style="color: var(--accent);">📂 Casos asignados</h5>
-                        </div>
-                        <p class="card-text">Consulta el listado de casos que tienes actualemente asignados.</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-blog">Ver casos</a>
-                        </div>
-                    </div>
+   <main class="container my-5">
+    <h2 class="text-center mb-4" style="color: var(--accent); font-weight: 700;">Bienvenido</h2>
+    <div class="row">
+        <!--Información del cliente-->
+        <div class="col-md-4">
+            <div class="card shadow rounded">
+                <div class="card-body">
+                    <h5 class="card-title">👤 Mis datos</h5>
+                    <p><strong>Nombre:</strong> miguel moreno</p>
+                    <p><strong>Email:</strong> miguel@email.com</p>
+                    <p><strong>Teléfono:</strong> 444444</p>
+                    <a href="#" class="btn btn-blog">Editar Perfil</a>
                 </div>
+          </div>
+        </div>
+
+        <!-- Procesos -->
+      <div class="col-md-8">
+        <div class="card shadow rounded">
+          <div class="card-body">
+            <h5 class="card-title">📂 Mis procesos legales</h5>
+            <table class="table table-striped text-center">
+              <thead class="table-dark">
+                <tr>
+                  <th>#</th>
+                  <th>Caso</th>
+                  <th>Estado</th>
+                  <th>Última actualización</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Demanda civil</td>
+                  <td><span class="badge bg-warning">En proceso</span></td>
+                  <td>15/09/2025</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Contrato laboral</td>
+                  <td><span class="badge bg-success">Finalizado</span></td>
+                  <td>02/09/2025</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="text-center">
+                <a href="#" class="btn btn-blog">Ver todos los procesos</a>
             </div>
-            
-            <!--Clientes-->
-            <div class="col-md-4">
-                <div class="card shadow h-100">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <h5 class="card-title" style="color: var(--accent);">👥 Clientes</h5>
-                        </div>
-                        <p class="card-text">Accede a la información de tus clientes registrados y asociados a tus procesos.</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-blog">Ver clientes</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!--Seguimiento-->
-            <div class="col-md-4">
-                <div class="card shadow h-100">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <h5 class="card-title" style="color: var(--accent);">📑 Seguimiento</h5>
-                        </div>
-                        <p class="card-text">Haz el seguimiento de cada uno de los procesos con detalles y actualizaciones.</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-blog">Ver clientes</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    </main>
+
+   </main>
 
 
 

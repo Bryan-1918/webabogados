@@ -29,7 +29,7 @@ if (mysqli_num_rows($result) > 0) {
                 header('location: ../abogadoDashboard.html');
                 break;
             case "Usuario":
-                header('location: ../index.html');
+                header('location: ../clienteDashboard.html');
                 break;
             default:
                 header('location: ../index.html');

@@ -1,38 +1,45 @@
 <?php
-// Verificación del login dependiendo del tipo de usuario
+// Verificar el login dependiendo del tipo de usuario
 session_start();
 include 'conexion.php';
+
 $emailUsuario = $_POST['emailUsuario'];
-$passUsuario = $_POST['passUsuario'];
+$passUsuario  = $_POST['passUsuario'];
 
-//echo $nombreUsuario;
-//echo $passUsuario;
-
-$sql = "SELECT emailUsuario, passUsuario, tipoUsuario FROM usuarios WHERE emailUsuario = '$emailUsuario' AND passUsuario = '$passUsuario'";
+$sql = "SELECT * FROM usuarios WHERE emailUsuario = '$emailUsuario'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
-  // output data of each row
-  $row = mysqli_fetch_assoc($result);
-  $tipoUsaurio = $row["tipoUsuario"];
-  echo $tipoUsaurio;
+    $row = mysqli_fetch_assoc($result);
 
-  switch($tipoUsaurio) {
-    case "Administrador": echo "Es un Super Usuario";
-                          header('location: ../crudUser.html');
-    break;
-    case "Usuario": echo "Es pepito";
-                    header('location: ../index.html');
-    break;
-  }
-  
+    // Verificar la contraseña encriptada
+    if (password_verify($passUsuario, $row['passUsuario'])) {
+        // Guardar sesión
+        $_SESSION['emailUsuario'] = $row['emailUsuario'];
+        $_SESSION['tipoUsuario']  = $row['tipoUsuario'];
+
+        switch ($row['tipoUsuario']) {
+            case "Superadmin":
+                header('location: ../crudUser.html');
+                break;
+            case "Administrador":
+                header('location: ../adminDashboard.html');
+                break;
+            case "Especializado":
+                header('location: ../abogadoDashboard.html');
+                break;
+            case "Usuario":
+                header('location: ../index.html');
+                break;
+            default:
+                header('location: ../index.html');
+        }
+    } else {
+        echo "<script>alert('❌ Contraseña incorrecta'); window.history.back();</script>";
+    }
 } else {
-  echo "<script>
-            alert('❌Contraseña incorrecta: " . mysqli_error($conn) . "');
-            window.location.href='../login.html';
-          </script>";
+    echo "<script>alert('❌ Usuario no encontrado'); window.history.back();</script>";
 }
 
 mysqli_close($conn);
-
 ?>

@@ -26,7 +26,7 @@ $sql = "INSERT INTO usuarios
         ('$nombreUsuario', '$apellidoUsuario', '$emailUsuario', '$telUsuario', '$passHash', '$tipoUsuario', NOW(), NOW())";
 
 if (mysqli_query($conn, $sql)) {
-    echo "<script>alert('✅ Usuario registrado correctamente'); window.location.href='../login.html';</script>";
+    echo "<script>alert('✅ Usuario registrado correctamente'); window.location.href='../index.html';</script>";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }

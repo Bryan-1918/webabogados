@@ -15,12 +15,16 @@ if(mysqli_num_rows($result) > 0) {
             <td>".$row["telUsuario"]."</td>
             <td>".$row["tipoUsuario"]."</td>
             <td>
-              <a href='./php/eliminarUsuario.php?email=".$row["emailUsuario"]."' class='btn btn-sm btn-primary'>Eliminar</a>
+                <a href='./php/eliminarUsuario.php?email=".$row["emailUsuario"]."' 
+                    class='btn btn-sm btn-danger'
+                    onclick=\"return confirm('¿Seguro que deseas eliminar este usuario?');\">
+                    Eliminar
+                </a>
             </td>
           </tr>";       
     }
 }else {
-        echo "<tr><td colpsan='7'> No hay usuarios registrados</td></tr>";
+        echo "<tr><td colspan='7'> No hay usuarios registrados</td></tr>";
 }
 
 mysqli_close($conn)

@@ -36,18 +36,24 @@
         </nav>
     </header>
 
-  <main class="container d-flex justify-content-center align-items-center vh-100">
-    <div class="card shadow p-4" style="max-width: 400px; width: 100%;">
-      <h2 class="text-center mb-4" style="color: var(--accent);">Eliminar Usuario</h2>
-      <form action="./php/eliminarUsuario.php" method="post">
-        <div class="mb-3">
-          <label for="email" class="form-label">Correo electrónico</label>
-          <input type="text" class="form-control" id="email" name="emailUsuario" placeholder="ejemplo@correo.com" required>
-        </div>
-        <button type="submit" class="btn w-100" style="background-color: var(--accent); color: white;">Eliminar</button>
-        <div class="text-center mt-3">
-        </div>
-      </form>
+  <main class="container my-5">
+    <h2 class="text-center mb-4" style="color: var(--accent); font-weight: 700;">Eliminar Usuarios</h2>
+    <div class="table-responsive shadow rounded">
+        <table class="table table-striped align-middle text-center">
+            <thead class="table-dark" href="./php/listarUsuarios.php">
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+                    <th>Rol</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="tbody-usuarios">
+            </tbody>
+        </table>
     </div>
   </main>
 

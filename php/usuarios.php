@@ -1,6 +1,5 @@
 <?php
 // Verificar el login dependiendo del tipo de usuario
-session_start();
 include 'conexion.php';
 
 $emailUsuario = $_POST['emailUsuario'];

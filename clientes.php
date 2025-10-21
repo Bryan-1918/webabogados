@@ -1,5 +1,4 @@
 <?php
-<?php
 // Lista de usuarios desde el CRUD
 include 'conexion.php';
 
@@ -23,8 +22,4 @@ if (mysqli_num_rows($result) > 0) {
 }
 
 mysqli_close($conn);
-?>
-
-
-
 ?>

@@ -37,57 +37,22 @@
     </header>
 
     <main class="container my-5">
-        <h2 class="text-center mb-4" style="color: var(--accent); font-weight: 700;">Panel del abogado</h2>
-        
-        <div class="row g-4">
-            <!--Casos asignados-->
-            <div class="col-md-4">
-                <div class="card shadow h-100">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <h5 class="card-title" style="color: var(--accent);">📂 Casos asignados</h5>
-                        </div>
-                        <p class="card-text">Consulta el listado de casos que tienes actualemente asignados.</p>
-                        <div class="text-center">
-                            <a href="casosAsignados.html" class="btn btn-blog">Ver casos</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!--Clientes-->
-            <div class="col-md-4">
-                <div class="card shadow h-100">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <h5 class="card-title" style="color: var(--accent);">👥 Clientes</h5>
-                        </div>
-                        <p class="card-text">Accede a la información de tus clientes registrados y asociados a tus procesos.</p>
-                        <div class="text-center">
-                            <a href="verClientes.html" class="btn btn-blog">Ver clientes</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!--Seguimiento-->
-            <div class="col-md-4">
-                <div class="card shadow h-100">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <h5 class="card-title" style="color: var(--accent);">📑 Seguimiento</h5>
-                        </div>
-                        <p class="card-text">Haz el seguimiento de cada uno de los procesos con detalles y actualizaciones.</p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-blog">Seguimiento</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </div>
+        <h2 class="text-center mb-4" style="color: var(--accent); font-weight: 700;">Clientes</h2>
+        <div class="table-responsive shadow rounded">
+        <table class="table table-striped align-middle text-center">
+            <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Descripción</th>
+                <th>Estado</th>
+                <th>Fecha</th>
+            </tr>
+            </thead>
+            <tbody id="tbody-casos"></tbody>
+        </table>
+        </div>
     </main>
-
-
 
   <footer class="py-4 bg-dark text-light">
         <div class="container">
